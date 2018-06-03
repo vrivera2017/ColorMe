@@ -1,0 +1,77 @@
+<!-- Code for this html page is adapted from Affectiva's example code for a Camera Detector to track different emotions.
+The original code is linked from https://knowledge.affectiva.com/v3.2/docs/analyze-the-camera-stream-3 and the corresponding 
+application is made available on JSFiddle: https://jsfiddle.net/affectiva/opyh5e8d/show/. All files listed as 
+dependencies have been taken and adapted from the Affectiva Javascript SDK for this project with the exception of overlay.css. 
+
+Veronica Rivera
+CMPS 261 Advanced Visualization
+University of California, Santa Cruz
+Spring 2018, 05/28/2018
+-->
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>ColorMe: Visualizing Color-Emotion Associations</title>
+  <script src = "js/jquery.js" type="text/javascript"></script>
+  <link href = "css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href = "css/overlay.css" rel="stylesheet" type="text/css">
+  <script src = "js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="affdex/affdex.js" type="text/javascript"> </script>
+    <script src="js/main2.js"></script>
+</head>
+<body>
+  <div>
+    <center>
+    <h1><font color = "#B201FE">ColorMe:  <font color = "orange">Visualizing Color-Emotion Associations</h1>
+    </center>
+  </div>
+  <div >
+    <p>
+      <font color ="black">
+      <strong>INSTRUCTIONS:</strong>
+    </br>
+    Press the start button below to start the detector. Press the stop button to close the detector. 
+    <br/> When a facial expression is detected, a colored transparency will appear over the face. 
+    <br/> The color corresponds to the percieved emotion.
+  </p>
+</div>
+  <div class="container-fluid">
+    <center>
+    <div class="row">
+      <div class="col-xs-6" id "key">
+      <p>
+        Yellow = Happy
+      </br>
+        Blue = Sad
+        <br/>
+        Red = Angry
+        <br/>
+        Green = Neutral/No Emotion
+      </p>
+    </div>
+      <div class="col-md-8 content col-md-offset-2" id="affdex_elements" style="width:680px;height:480px;">
+        <canvas id="overlay" width="680" height="480"></canvas>
+        <script type="text/javascript" src="https://download.affectiva.com/js/3.2/adapter-1.4.0.js"></script>
+      </center>
+      </div>
+      <div class="col-xs-4">
+        <div style="height:25em;">
+          <div id="results" style="word-wrap:break-word;"></div>
+          <canvas id="canvas" width ="405" height="350"></canvas>
+        </div>
+        <div>
+         <strong>DETECTOR LOG MESSAGES</strong>
+        </div>
+       <div id="logs"></div>
+      </div>
+    <div id="buttons">
+      <center>
+        <font color = "white">
+      <button id="start" onclick="onStart()">Start</button>
+      <button id="stop" onclick="onStop()">Stop</button>
+    </center>
+    </div>
+</body>
+</html>

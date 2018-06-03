@@ -1,0 +1,50 @@
+.col-xs-4{
+	text-align: center;
+    position:fixed;
+    top:50px;
+    right:30px;
+ }
+
+/* Formatting for the div with id = key */
+.col-xs-6{
+	text-align:left;
+	position:fixed;
+	top:300px;
+	left:15px;
+
+}
+
+/* Colored overlay */
+#overlay{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 3;
+	background: var(--backgroundColor);
+	opacity: 0.3;
+}
+
+/* Formatting for the Buttons div, id = buttons */
+#buttons{
+	position: fixed;
+	bottom: 230px;
+	left: 45px;
+	font-size: 16px;
+}
+
+/* Start button */
+#start{
+	background-color: #B201FE;
+	padding: 8px;
+}
+
+/* Stop button */
+#stop{
+	background-color: #B201FE;
+	padding: 8px;
+}
+
+
+
