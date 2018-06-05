@@ -8,8 +8,8 @@ The application requires running on Chrome or Firefox. It does not work on any v
 
 ## Instructions
 
-1. Download the program files. 
-2. Open a terminal window and go the directory in which the downloaded program files are saved. 
+1. Download the program files and place them into a new folder. 
+2. Open a terminal window and cd into the folder that contains the program files. 
 3. Run "python -m SimpleHTTPServer".  
 4. Open a new window in Chrome or Firefox and navigate to http://localhost:8000. Follow the instructions on the page for starting and stopping the emotion detector. 
 
